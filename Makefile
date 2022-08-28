@@ -16,4 +16,4 @@ _example.so: example.i
 	python setup.py build_ext --inplace
 
 test:
-	python -c "from _example import add_sin; print(f'Sin of 1 + 2 is {add_sin(1, 2)}')"
+	python -c "from _example import rms; print(f'RMS of [1, 2] is {rms([1, 2])}')"

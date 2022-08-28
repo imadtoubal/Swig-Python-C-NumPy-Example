@@ -5,6 +5,11 @@
 #include "src/example.h"
 %}
 
-%include "typemaps.i"
-/* list functions to be interfaced: */
-void add_sin(double r1, double r2, double *OUTPUT);
+%include "numpy.i"
+
+%init %{
+import_array();
+%}
+
+%apply (double* IN_ARRAY1, int DIM1) {(double* seq, int n)};
+%include "src/example.h"

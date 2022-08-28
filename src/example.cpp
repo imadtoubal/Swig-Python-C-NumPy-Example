@@ -3,7 +3,16 @@
 
 #include "example.h"
 
-void add_sin(double r1, double r2, double *s)
-{
-    *s = sin(r1 + r2);
+double rms(double *seq, int n) {
+    double mean = 0.0;
+    for (int i = 0; i < n; i++) {
+        mean += seq[i];
+    }
+    mean /= n;
+    double rms = 0.0;
+    for (int i = 0; i < n; i++) {
+        rms += (seq[i] - mean) * (seq[i] - mean);
+    }
+    rms /= n;
+    return sqrt(rms);
 }
