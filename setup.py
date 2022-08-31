@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 
-"""
-setup.py file for SWIG example
-"""
-
-from distutils.core import Extension, setup
-
-# Third-party modules - we depend on numpy for everything
 import numpy
+from setuptools import Extension, setup
 
 # Obtain the numpy include directory.  This logic works across numpy versions.
 try:

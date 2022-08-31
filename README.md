@@ -1,7 +1,9 @@
 # SWIG
 This is an example of using C++ to write cutsom functions to extend numpy through
-the SWIG interface. The example in this repo calculates the root mean square
+the SWIG interface. There are two example applications in this repo:
+1. The first example in this repo calculates the root mean square
 (RMS) of a sequence of numbers.
+2. The second example takes as input a 2D array and binarizes it inplace.
 ## Getting started
 
 Build
