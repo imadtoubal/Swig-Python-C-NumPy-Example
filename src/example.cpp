@@ -16,3 +16,12 @@ double rms(double *seq, int n) {
     rms /= n;
     return sqrt(rms);
 }
+
+void binarize(double* seq, int n, int m) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            int index = i * m + j;
+            seq[index] = seq[index] > 127 ? 255 : 0;
+        }
+    }
+}
